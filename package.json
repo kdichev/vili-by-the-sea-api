@@ -1,0 +1,24 @@
+{
+  "name": "vili-by-the-sea-api",
+  "version": "1.0.0",
+  "description": "vili by the sea api",
+  "main": "\u001b",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kdichev/vili-by-the-sea-api.git"
+  },
+  "author": "Konstantin Dichev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kdichev/vili-by-the-sea-api/issues"
+  },
+  "homepage": "https://github.com/kdichev/vili-by-the-sea-api#readme",
+  "dependencies": {
+    "moment": "^2.20.1",
+    "moment-range": "^3.1.0",
+    "node-fetch": "^1.7.3"
+  }
+}

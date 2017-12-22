@@ -1,0 +1,76 @@
+type File @model {
+  contentType: String!
+  createdAt: DateTime!
+  id: ID! @isUnique
+  name: String!
+  secret: String! @isUnique
+  size: Int!
+  updatedAt: DateTime!
+  url: String! @isUnique
+}
+
+type Reservation @model {
+  arrivalDate: DateTime! @isUnique
+  createdAt: DateTime!
+  departureDate: DateTime! @isUnique
+  id: ID! @isUnique
+  rooms: [Room!]! @relation(name: "ReservationOnRoom")
+  user: User @relation(name: "ReservationOnUser")
+  guestses: [Guest!]! @relation(name: "GuestsOnReservation")
+}
+
+type Booking @model {
+  arrivalDate: DateTime! @isUnique
+  createdAt: DateTime!
+  departureDate: DateTime! @isUnique
+  id: ID! @isUnique
+  rooms: [Room!]! @relation(name: "BookingOnRoom")
+  user: User @relation(name: "BookingOnUser")
+}
+
+type Room @model {
+  id: ID! @isUnique
+  reservations: [Reservation!]! @relation(name: "ReservationOnRoom")
+  roomId: Int!
+  roomTypes: RoomTypes @relation(name: "RoomOnRoomTypes")
+  bookings: [Booking!]! @relation(name: "BookingOnRoom")
+  floor: String
+  imgUrl: [String!]
+}
+
+type User @model {
+  createdAt: DateTime!
+  id: ID! @isUnique
+  reservations: [Reservation!]! @relation(name: "ReservationOnUser")
+  updatedAt: DateTime!
+  paymentInfo: String
+  bookings: [Booking!]! @relation(name: "BookingOnUser")
+  name: String!
+  email: String!
+}
+
+type Guest @model {
+  id: ID! @isUnique
+  name: [String!]
+  nationalId: Int!
+  reservation: Reservation @relation(name: "GuestsOnReservation")
+}
+
+type Rates @model {
+  id: ID! @isUnique
+  price: Int! @defaultValue(value: 15)
+  roomTypeses: [RoomTypes!]! @relation(name: "RatesOnRoomTypes")
+}
+
+type RoomTypes @model {
+  id: ID! @isUnique
+  rates: Rates @relation(name: "RatesOnRoomTypes")
+  rooms: [Room!]! @relation(name: "RoomOnRoomTypes")
+  type: String!
+  beds: Int
+}
+
+enum Dd {
+  Ddd
+  Dddd
+}

@@ -1,0 +1,15 @@
+type AdditionPayload {
+  sum: Json
+}
+
+extend type Query {
+  add(a: DateTime! b: DateTime!): AdditionPayload
+}
+
+# type AdditionPayload {
+#   sum: Int!
+# }
+#
+# extend type Mutation {
+#   add(a: Int! b: Int!): AdditionPayload
+#}

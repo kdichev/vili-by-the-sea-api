@@ -1,0 +1,49 @@
+types: ./types.graphql
+functions:
+  CapacityCheck:
+    handler:
+      code:
+        src: ./src/CapacityCheck.js
+    type: resolver
+    schema: ./src/CapacityCheck.graphql
+permissions:
+- operation: Booking.read
+- operation: Booking.create
+- operation: Booking.update
+- operation: Booking.delete
+- operation: File.read
+- operation: File.create
+- operation: File.update
+- operation: File.delete
+- operation: Guest.read
+- operation: Guest.create
+- operation: Guest.update
+- operation: Guest.delete
+- operation: Rates.read
+- operation: Rates.create
+- operation: Rates.update
+- operation: Rates.delete
+- operation: Reservation.read
+- operation: Reservation.create
+- operation: Reservation.update
+- operation: Reservation.delete
+- operation: Room.read
+- operation: Room.update
+- operation: Room.delete
+- operation: RoomTypes.read
+- operation: RoomTypes.create
+- operation: RoomTypes.update
+- operation: RoomTypes.delete
+- operation: User.read
+- operation: User.create
+- operation: User.update
+- operation: User.delete
+- operation: BookingOnRoom.*
+- operation: BookingOnUser.*
+- operation: GuestsOnReservation.*
+- operation: RatesOnRoomTypes.*
+- operation: ReservationOnRoom.*
+- operation: ReservationOnUser.*
+- operation: RoomOnRoomTypes.*
+rootTokens:
+- website
