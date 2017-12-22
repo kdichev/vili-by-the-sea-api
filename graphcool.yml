@@ -1,6 +1,6 @@
 types: ./types.graphql
 functions:
-  CapacityCheck:
+  RoomCapacityCheck:
     handler:
       code:
         src: ./src/CapacityCheck.js

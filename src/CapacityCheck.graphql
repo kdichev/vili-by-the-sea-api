@@ -1,9 +1,9 @@
-type AdditionPayload {
-  sum: Json
+type AvailableRoomsPayload {
+  availableRooms: Json
 }
 
 extend type Query {
-  add(a: DateTime! b: DateTime!): AdditionPayload
+  getAwailableRooms(a: DateTime! b: DateTime!): AvailableRoomsPayload
 }
 
 # type AdditionPayload {
