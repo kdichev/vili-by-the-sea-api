@@ -10,9 +10,9 @@ type File @model {
 }
 
 type Reservation @model {
-  arrivalDate: DateTime! @isUnique
+  arrivalDate: DateTime!
   createdAt: DateTime!
-  departureDate: DateTime! @isUnique
+  departureDate: DateTime!
   id: ID! @isUnique
   rooms: [Room!]! @relation(name: "ReservationOnRoom")
   user: User @relation(name: "ReservationOnUser")

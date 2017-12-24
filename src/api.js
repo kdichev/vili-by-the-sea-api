@@ -14,11 +14,6 @@ const searchQuery = `
     }
     allRooms {
       id
-      reservations {
-        id
-        arrivalDate
-        departureDate
-      }
     }
   }
 `

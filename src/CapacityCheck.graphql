@@ -5,11 +5,3 @@ type AvailableRoomsPayload {
 extend type Query {
   getAwailableRooms(a: DateTime! b: DateTime!): AvailableRoomsPayload
 }
-
-# type AdditionPayload {
-#   sum: Int!
-# }
-#
-# extend type Mutation {
-#   add(a: Int! b: Int!): AdditionPayload
-#}
