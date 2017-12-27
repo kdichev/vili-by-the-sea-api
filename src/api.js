@@ -1,6 +1,6 @@
 const fetch = require('node-fetch')
 
-const API_LINK = 'https://api.graph.cool/simple/v1/cjba2txd62g5p0182pezwuy1z'
+const API_LINK = process.env.API_URL
 
 const searchQuery = `
   query {
