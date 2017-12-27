@@ -1,9 +1,17 @@
+custom:
+  dev:
+    API_URL: "https://api.graph.cool/simple/v1/cjba2txd62g5p0182pezwuy1z"
+  prod:
+    API_URL: "https://api.graph.cool/simple/v1/cjba2txd62g5p0182pezwuy1z"
+
 types: ./types.graphql
 functions:
   RoomCapacityCheck:
     handler:
       code:
         src: ./src/CapacityCheck.js
+        environment:
+          API_URL: ${self:custom.${opt:target}.API_URL}
     type: resolver
     schema: ./src/CapacityCheck.graphql
 permissions:
@@ -29,6 +37,7 @@ permissions:
 - operation: Reservation.delete
 - operation: Room.read
 - operation: Room.update
+- operation: Room.create
 - operation: Room.delete
 - operation: RoomTypes.read
 - operation: RoomTypes.create
