@@ -1,6 +1,6 @@
 custom:
   dev:
-    API_URL: "https://api.graph.cool/simple/v1/cjba2txd62g5p0182pezwuy1z"
+    API_URL: "http://localhost:60000/simple/v1/cjbnqs44c0007014849crbkg8"
   prod:
     API_URL: "https://api.graph.cool/simple/v1/cjba2txd62g5p0182pezwuy1z"
 
