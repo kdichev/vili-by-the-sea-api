@@ -14,6 +14,7 @@ functions:
         src: ./src/CapacityCheck.js
         environment:
           API_URL: ${self:custom.${opt:target}.API_URL}
+          API_KEY: ${self:custom.${opt:target}.API_KEY}
     type: resolver
     schema: ./src/CapacityCheck.graphql
 permissions:
