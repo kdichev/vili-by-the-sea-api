@@ -8,7 +8,6 @@ import { createRange, isOverlappingRanges } from './dateRangeHelpers'
 
 export default async ({ data }) => {
   const queryRange = createRange(data.a, data.b)
-  console.log(await fetchSearchData())
   const { allRooms, allReservations } = await fetchSearchData()
   const reservedRoomIds = getAllReservedRoomIds(queryRange, allReservations)
   const filteredResults = filterResultsWithRoomIds(allRooms, reservedRoomIds)
