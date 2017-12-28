@@ -4,7 +4,7 @@
   "description": "vili by the sea api",
   "main": "\u001b",
   "scripts": {
-    "test": "",
+    "test": "jest",
     "deploy": "graphcool deploy"
   },
   "repository": {
