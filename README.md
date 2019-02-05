@@ -1,5 +1,7 @@
 ## Welcome to the new Graphcool Framework!
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/kdichev/vili-by-the-sea-api.svg)](https://greenkeeper.io/)
+
 Your project has just been upgraded and is ready for usage with the Graphcool CLI.
 
 In order to use the new CLI, please install it first:
